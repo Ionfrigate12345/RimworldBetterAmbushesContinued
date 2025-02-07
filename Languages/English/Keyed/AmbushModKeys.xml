@@ -3,6 +3,20 @@
 	<!--Settings-->
 	<CM_Less_Shitty_Ambush_SettingEnemyFactionMultiplierLabel>Enemy faction strength multiplier</CM_Less_Shitty_Ambush_SettingEnemyFactionMultiplierLabel>
 	<CM_Less_Shitty_Ambush_SettingManhunterPackMultiplierLabel>Manhunter pack strength multiplier</CM_Less_Shitty_Ambush_SettingManhunterPackMultiplierLabel>
+	
+	<CM_Less_Shitty_Ambush_SettingUsePlayerMainColonyThreat>(1.5 NEW FEATURE) Additional ambush threat from player largest settlement</CM_Less_Shitty_Ambush_SettingUsePlayerMainColonyThreat>
+	<CM_Less_Shitty_Ambush_SettingUsePlayerMainColonyThreatTooltip>
+		If this option is checked, in addition of multipliers above, a certain percentage of the the current storyteller threat points of player's largest settlement (the one with the highest wealth) will also be added to the ambush strength.
+		If the player doesn't have any settlement, this part of ambush strength will be 0.
+		Temporary maps, SOS2 or Rimnauts 2 space maps are NOT counted as player settlement.
+	</CM_Less_Shitty_Ambush_SettingUsePlayerMainColonyThreatTooltip>
+	<CM_Less_Shitty_Ambush_SettingUsePlayerMainColonyThreatManhunterPackPercentageLabel>
+		Percentage of settlement threat for manhunter pack ambush
+	</CM_Less_Shitty_Ambush_SettingUsePlayerMainColonyThreatManhunterPackPercentageLabel>
+	<CM_Less_Shitty_Ambush_SettingUsePlayerMainColonyThreatEnemyFactionPercentageLabel>
+		Percentage of settlement threat for enemy faction ambush
+	</CM_Less_Shitty_Ambush_SettingUsePlayerMainColonyThreatEnemyFactionPercentageLabel>
+	
 	<CM_Less_Shitty_Ambush_SettingExitMapBeforeWinLabel>Allow exiting map before defeating ambush</CM_Less_Shitty_Ambush_SettingExitMapBeforeWinLabel>
 	<CM_Less_Shitty_Ambush_SettingMapExitGridAvailableTimeLabel>Seconds until exit map possible (1000 seconds per day)</CM_Less_Shitty_Ambush_SettingMapExitGridAvailableTimeLabel>
 	<CM_Less_Shitty_Ambush_SettingDebugLogMessagesLabel>Show debug log messages</CM_Less_Shitty_Ambush_SettingDebugLogMessagesLabel>

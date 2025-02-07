@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+	<!-- Paramètres -->
+	<CM_Less_Shitty_Ambush_SettingEnemyFactionMultiplierLabel>Multiplicateur de force d'embuscade des factions ennemies</CM_Less_Shitty_Ambush_SettingEnemyFactionMultiplierLabel>
+	<CM_Less_Shitty_Ambush_SettingManhunterPackMultiplierLabel>Multiplicateur de force d'embuscade des meutes d'animaux enragés</CM_Less_Shitty_Ambush_SettingManhunterPackMultiplierLabel>
+	
+	<CM_Less_Shitty_Ambush_SettingUsePlayerMainColonyThreat>(1.5 NOUVEAUTÉ) Embuscade supplémentaire par la plus grande colonie du joueur</CM_Less_Shitty_Ambush_SettingUsePlayerMainColonyThreat>
+	<CM_Less_Shitty_Ambush_SettingUsePlayerMainColonyThreatTooltip>
+		Si cette option est activée, en plus des multiplicateurs ci-dessus, un certain pourcentage des points de menace actuels du storyteller pour la plus grande colonie du joueur (celle avec la plus grande richesse) sera ajouté à la taille de force de l'embuscade.
+		Si le joueur n'a aucune colonie, cette partie sera 0.
+		Les cartes temporaires, les cartes spatiales de SOS2 ou de Rimnauts 2 ne sont PAS considérées comme des colonies du joueur.
+	</CM_Less_Shitty_Ambush_SettingUsePlayerMainColonyThreatTooltip>
+	<CM_Less_Shitty_Ambush_SettingUsePlayerMainColonyThreatManhunterPackPercentageLabel>
+		Pourcentage de la menace de la colonie pour une embuscade de meute d'animaux enragés
+	</CM_Less_Shitty_Ambush_SettingUsePlayerMainColonyThreatManhunterPackPercentageLabel>
+	<CM_Less_Shitty_Ambush_SettingUsePlayerMainColonyThreatEnemyFactionPercentageLabel>
+		Pourcentage de la menace de la colonie pour une embuscade de faction ennemie
+	</CM_Less_Shitty_Ambush_SettingUsePlayerMainColonyThreatEnemyFactionPercentageLabel>
+	
+	<CM_Less_Shitty_Ambush_SettingExitMapBeforeWinLabel>Autoriser à quitter la carte avant de vaincre l'embuscade</CM_Less_Shitty_Ambush_SettingExitMapBeforeWinLabel>
+	<CM_Less_Shitty_Ambush_SettingMapExitGridAvailableTimeLabel>Temps nécessaire avant de pouvoir quitter la carte (1000 secondes par jour)</CM_Less_Shitty_Ambush_SettingMapExitGridAvailableTimeLabel>
+	<CM_Less_Shitty_Ambush_SettingDebugLogMessagesLabel>Afficher les messages du debug</CM_Less_Shitty_Ambush_SettingDebugLogMessagesLabel>
+</LanguageData>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+	<!-- 设置 -->
+	<CM_Less_Shitty_Ambush_SettingEnemyFactionMultiplierLabel>敌对派系强度倍率</CM_Less_Shitty_Ambush_SettingEnemyFactionMultiplierLabel>
+	<CM_Less_Shitty_Ambush_SettingManhunterPackMultiplierLabel>狂暴动物群强度倍率</CM_Less_Shitty_Ambush_SettingManhunterPackMultiplierLabel>
+	
+	<CM_Less_Shitty_Ambush_SettingUsePlayerMainColonyThreat>(1.5 新功能)从玩家最大定居点额外增加伏击强度</CM_Less_Shitty_Ambush_SettingUsePlayerMainColonyThreat>
+	<CM_Less_Shitty_Ambush_SettingUsePlayerMainColonyThreatTooltip>
+		如果启用此选项，除了上述倍率外，还会给远行队伏击强度额外加入玩家最大据点（即财富最高的据点）当前叙事者的威胁点数的一定百分比。
+		如果玩家没有据点，该部分的伏击强度增幅为0。
+		临时地图、SOS2 或 Rimnauts 2 的太空地图不被视为玩家据点。
+	</CM_Less_Shitty_Ambush_SettingUsePlayerMainColonyThreatTooltip>
+	<CM_Less_Shitty_Ambush_SettingUsePlayerMainColonyThreatManhunterPackPercentageLabel>
+		发狂动物伏击强度增加据点威胁的该百分比
+	</CM_Less_Shitty_Ambush_SettingUsePlayerMainColonyThreatManhunterPackPercentageLabel>
+	<CM_Less_Shitty_Ambush_SettingUsePlayerMainColonyThreatEnemyFactionPercentageLabel>
+		敌对派系伏击强度增加据点威胁的该百分比
+	</CM_Less_Shitty_Ambush_SettingUsePlayerMainColonyThreatEnemyFactionPercentageLabel>
+	
+	<CM_Less_Shitty_Ambush_SettingExitMapBeforeWinLabel>允许在击败伏击前离开地图</CM_Less_Shitty_Ambush_SettingExitMapBeforeWinLabel>
+	<CM_Less_Shitty_Ambush_SettingMapExitGridAvailableTimeLabel>离开地图所需时间（每天1000秒）</CM_Less_Shitty_Ambush_SettingMapExitGridAvailableTimeLabel>
+	<CM_Less_Shitty_Ambush_SettingDebugLogMessagesLabel>显示调试信息</CM_Less_Shitty_Ambush_SettingDebugLogMessagesLabel>
+</LanguageData>
