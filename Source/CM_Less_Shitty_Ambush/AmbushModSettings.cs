@@ -61,11 +61,11 @@ namespace CM_Less_Shitty_Ambush
             
             listing_Standard.Label("CM_Less_Shitty_Ambush_SettingUsePlayerMainColonyThreatManhunterPackPercentageLabel".Translate());
             listing_Standard.Label(enemyFactionPlayerMainColonyThreatMultiplier.ToString());
-            enemyFactionPlayerMainColonyThreatMultiplier = listing_Standard.Slider(enemyFactionPlayerMainColonyThreatMultiplier, 0f, 100f);
+            enemyFactionPlayerMainColonyThreatMultiplier = listing_Standard.Slider(enemyFactionPlayerMainColonyThreatMultiplier, 0f, 1.0f);
             
             listing_Standard.Label("CM_Less_Shitty_Ambush_SettingUsePlayerMainColonyThreatEnemyFactionPercentageLabel".Translate());
             listing_Standard.Label(manhunterPlayerMainColonyThreatMultiplier.ToString());
-            manhunterPlayerMainColonyThreatMultiplier = listing_Standard.Slider(manhunterPlayerMainColonyThreatMultiplier, 0f, 100f);
+            manhunterPlayerMainColonyThreatMultiplier = listing_Standard.Slider(manhunterPlayerMainColonyThreatMultiplier, 0f, 1.0f);
 
             listing_Standard.CheckboxLabeled("CM_Less_Shitty_Ambush_SettingExitMapBeforeWinLabel".Translate(), ref allowExitMapBeforeWin);
 
