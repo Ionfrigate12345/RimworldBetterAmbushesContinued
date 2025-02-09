@@ -16,7 +16,7 @@ namespace CM_Less_Shitty_Ambush
             public static void Prefix(IncidentWorker_CaravanDemand __instance, ref IncidentParms parms)
             {
                 float newPoints = parms.points * LessShittyAmbushMod.settings.enemyFactionMultiplier;
-                Logger.MessageFormat(__instance, "Muliplying enemy faction points: {0} * {1} = {2}", parms.points, LessShittyAmbushMod.settings.enemyFactionMultiplier, newPoints);
+                Logger.MessageFormat(__instance, "(Less Shitty Ambush)Muliplying enemy faction points: {0} * {1} = {2}", parms.points, LessShittyAmbushMod.settings.enemyFactionMultiplier, newPoints);
 
                 if (LessShittyAmbushMod.settings.usePlayerMainColonyThreat)
                 {

@@ -16,7 +16,7 @@ namespace CM_Less_Shitty_Ambush
             public static void Prefix(IncidentWorker_Ambush_ManhunterPack __instance, ref IncidentParms parms)
             {
                 float newPoints = parms.points * LessShittyAmbushMod.settings.manhunterPackMultiplier;
-                Logger.MessageFormat(__instance, "Muliplying manhunter pack points: {0} * {1} = {2}", parms.points, LessShittyAmbushMod.settings.manhunterPackMultiplier, newPoints);
+                Logger.MessageFormat(__instance, "(Less Shitty Ambush)Muliplying manhunter pack points: {0} * {1} = {2}", parms.points, LessShittyAmbushMod.settings.manhunterPackMultiplier, newPoints);
 
                 if (LessShittyAmbushMod.settings.usePlayerMainColonyThreat)
                 {

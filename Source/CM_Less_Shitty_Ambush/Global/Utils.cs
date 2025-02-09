@@ -21,11 +21,11 @@ namespace CM_Less_Shitty_Ambush.Global
         }
 
         public static int GetRandomThreatPointsByPlayerWealth(
-            Map playerHomeMap,
+            Map map,
             float factorPercentage //Percentage of threat from this player colony
             )
         {
-            float threatAvg = StorytellerUtility.DefaultThreatPointsNow(playerHomeMap);
+            float threatAvg = StorytellerUtility.DefaultThreatPointsNow(map);
             return (int)(threatAvg * factorPercentage);
         }
 
@@ -57,6 +57,42 @@ namespace CM_Less_Shitty_Ambush.Global
         public static bool IsSOS2OrRimNauts2SpaceMap(Map map)
         {
             return IsSOS2SpaceMap(map) || IsRimNauts2SpaceMap(map);
+        }
+
+        public static bool RunIncident(IncidentDef incidentDef, float points = 0)
+        {
+            var incidentParms = StorytellerUtility.DefaultParmsNow(incidentDef.category, Find.World);
+            if(points > 0)
+            {
+                incidentParms.points = points;
+            }
+            if (incidentDef.pointsScaleable)
+            {
+                var storytellerComp = Find.Storyteller.storytellerComps.First(comp =>
+                    comp is StorytellerComp_OnOffCycle || comp is StorytellerComp_RandomMain);
+                incidentParms = storytellerComp.GenerateParms(incidentDef.category, incidentParms.target);
+            }
+
+            return incidentDef.Worker.TryExecute(incidentParms);
+        }
+
+        public static Faction FindRandomHostileFactionOnMap(Map map, List<Faction> eligibleHostileFactions)
+        {
+            Faction onMapHostileFaction = null;
+            var hostilePawns = map.mapPawns.AllPawnsSpawned.Where(
+                pawn => pawn.Faction.HostileTo(Faction.OfPlayer)
+                && eligibleHostileFactions.Contains(pawn.Faction)
+            );
+            Pawn randomHostilePawn = null;
+            if (hostilePawns.Any())
+            {
+                randomHostilePawn = hostilePawns.RandomElement();
+            }
+            if (randomHostilePawn != null)
+            {
+                onMapHostileFaction = randomHostilePawn.Faction;
+            }
+            return onMapHostileFaction;
         }
     }
 }

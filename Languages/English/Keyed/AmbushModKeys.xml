@@ -17,7 +17,12 @@
 		Percentage of settlement threat for enemy faction ambush
 	</CM_Less_Shitty_Ambush_SettingUsePlayerMainColonyThreatEnemyFactionPercentageLabel>
 	
+	<CM_Less_Shitty_Ambush_SettingTempMapMultiplierLabel>(1.5 NEW FEATURE) Temporary maps strength multiplier</CM_Less_Shitty_Ambush_SettingTempMapMultiplierLabel>
+	<CM_Less_Shitty_Ambush_SettingTempMapAdditionalAvgRaidsPer10DaysLabel>Additional average raids per 10 day on site</CM_Less_Shitty_Ambush_SettingTempMapAdditionalAvgRaidsPer10DaysLabel>
+	
 	<CM_Less_Shitty_Ambush_SettingExitMapBeforeWinLabel>Allow exiting map before defeating ambush</CM_Less_Shitty_Ambush_SettingExitMapBeforeWinLabel>
 	<CM_Less_Shitty_Ambush_SettingMapExitGridAvailableTimeLabel>Seconds until exit map possible (1000 seconds per day)</CM_Less_Shitty_Ambush_SettingMapExitGridAvailableTimeLabel>
 	<CM_Less_Shitty_Ambush_SettingDebugLogMessagesLabel>Show debug log messages</CM_Less_Shitty_Ambush_SettingDebugLogMessagesLabel>
+	
+	<CM_Less_Shitty_Ambush_SettingTempMapEnemyReinforcementMessage>Enemy reinforcement is coming</CM_Less_Shitty_Ambush_SettingTempMapEnemyReinforcementMessage>
 </LanguageData>

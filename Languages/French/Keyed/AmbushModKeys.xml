@@ -17,7 +17,12 @@
 		Pourcentage de la menace de la colonie pour une embuscade de faction ennemie
 	</CM_Less_Shitty_Ambush_SettingUsePlayerMainColonyThreatEnemyFactionPercentageLabel>
 	
+	<CM_Less_Shitty_Ambush_SettingTempMapMultiplierLabel>(1.5 NOUVEAUTÉ) Multiplicateur de force d'embuscade sur les cartes temporaires</CM_Less_Shitty_Ambush_SettingTempMapMultiplierLabel>
+	<CM_Less_Shitty_Ambush_SettingTempMapAdditionalAvgRaidsPer10DaysLabel>Sur les cartes temporaires, le nombre moyen d'attaques additionelles pour tous les 10 jours</CM_Less_Shitty_Ambush_SettingTempMapAdditionalAvgRaidsPer10DaysLabel>
+	
 	<CM_Less_Shitty_Ambush_SettingExitMapBeforeWinLabel>Autoriser à quitter la carte avant de vaincre l'embuscade</CM_Less_Shitty_Ambush_SettingExitMapBeforeWinLabel>
 	<CM_Less_Shitty_Ambush_SettingMapExitGridAvailableTimeLabel>Temps nécessaire avant de pouvoir quitter la carte (1000 secondes par jour)</CM_Less_Shitty_Ambush_SettingMapExitGridAvailableTimeLabel>
 	<CM_Less_Shitty_Ambush_SettingDebugLogMessagesLabel>Afficher les messages du debug</CM_Less_Shitty_Ambush_SettingDebugLogMessagesLabel>
+	
+	<CM_Less_Shitty_Ambush_SettingTempMapEnemyReinforcementMessage>le renforcement d'enemi arrive</CM_Less_Shitty_Ambush_SettingTempMapEnemyReinforcementMessage>
 </LanguageData>

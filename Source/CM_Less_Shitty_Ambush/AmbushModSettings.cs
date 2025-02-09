@@ -10,14 +10,18 @@ namespace CM_Less_Shitty_Ambush
     {
         private float maxEnemyFactionMultiplier = 100.0f;
         private float maxManhunterPackMultiplier = 100.0f;
-        private int maxSecondsUntilExitMapPossible = 1000;
+        private float maxTempMapMultiplier = 100.0f;
 
         public float enemyFactionMultiplier = 2.0f;
         public float manhunterPackMultiplier = 2.0f;
 
+        private int maxSecondsUntilExitMapPossible = 1000;
         public bool usePlayerMainColonyThreat = false;
         public float enemyFactionPlayerMainColonyThreatMultiplier = 0.1f;
         public float manhunterPlayerMainColonyThreatMultiplier = 0.1f;
+
+        public float tempMapMultiplier = 2.0f;
+        public float tempMapAdditionalAvgRaidsPer10Days = 1.0f;
 
         public int secondsUntilExitMapPossible = 120;
         public bool allowExitMapBeforeWin = false;
@@ -30,6 +34,9 @@ namespace CM_Less_Shitty_Ambush
 
             Scribe_Values.Look(ref enemyFactionMultiplier, "enemyFactionMultiplier", 2.0f);
             Scribe_Values.Look(ref manhunterPackMultiplier, "manhunterPackMultiplier", 2.0f);
+            Scribe_Values.Look(ref tempMapMultiplier, "tempMapMultiplier", 2.0f);
+            Scribe_Values.Look(ref tempMapAdditionalAvgRaidsPer10Days, "tempMapAdditionalAvgRaidsPer10Days", 1.0f);
+
             Scribe_Values.Look(ref secondsUntilExitMapPossible, "secondsUntilExitMapPossible", 120);
             Scribe_Values.Look(ref allowExitMapBeforeWin, "allowExitMapBeforeWin", false);
             Scribe_Values.Look(ref showDebugLogMessages, "showDebugLogMessages", false);
@@ -66,6 +73,14 @@ namespace CM_Less_Shitty_Ambush
             listing_Standard.Label("CM_Less_Shitty_Ambush_SettingUsePlayerMainColonyThreatEnemyFactionPercentageLabel".Translate());
             listing_Standard.Label(manhunterPlayerMainColonyThreatMultiplier.ToString());
             manhunterPlayerMainColonyThreatMultiplier = listing_Standard.Slider(manhunterPlayerMainColonyThreatMultiplier, 0f, 1.0f);
+
+            listing_Standard.Label("CM_Less_Shitty_Ambush_SettingTempMapMultiplierLabel".Translate());
+            listing_Standard.Label(tempMapMultiplier.ToString());
+            tempMapMultiplier = listing_Standard.Slider(tempMapMultiplier, 0.1f, maxTempMapMultiplier);
+
+            listing_Standard.Label("CM_Less_Shitty_Ambush_SettingTempMapAdditionalAvgRaidsPer10DaysLabel".Translate());
+            listing_Standard.Label(tempMapAdditionalAvgRaidsPer10Days.ToString());
+            tempMapAdditionalAvgRaidsPer10Days = listing_Standard.Slider(tempMapAdditionalAvgRaidsPer10Days, 0f, 100.0f);
 
             listing_Standard.CheckboxLabeled("CM_Less_Shitty_Ambush_SettingExitMapBeforeWinLabel".Translate(), ref allowExitMapBeforeWin);
 
