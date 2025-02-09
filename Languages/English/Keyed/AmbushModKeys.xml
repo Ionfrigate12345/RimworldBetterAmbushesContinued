@@ -7,8 +7,8 @@
 	<CM_Less_Shitty_Ambush_SettingUsePlayerMainColonyThreat>(1.5 NEW FEATURE) Additional ambush threat from player largest settlement</CM_Less_Shitty_Ambush_SettingUsePlayerMainColonyThreat>
 	<CM_Less_Shitty_Ambush_SettingUsePlayerMainColonyThreatTooltip>
 		If this option is checked, in addition of multipliers above, a certain percentage of the the current storyteller threat points of player's largest settlement (the one with the highest wealth) will also be added to the ambush strength.
-		If the player doesn't have any settlement, this part of ambush strength will be 0.
-		Temporary maps, SOS2 or Rimnauts 2 space maps are NOT counted as player settlement.
+		\nIf the player doesn't have any settlement, this part of ambush strength will be 0.
+		\nTemporary maps, SOS2 or Rimnauts 2 space maps are NOT counted as player settlement.
 	</CM_Less_Shitty_Ambush_SettingUsePlayerMainColonyThreatTooltip>
 	<CM_Less_Shitty_Ambush_SettingUsePlayerMainColonyThreatManhunterPackPercentageLabel>
 		Percentage of settlement threat for manhunter pack ambush
@@ -19,6 +19,12 @@
 	
 	<CM_Less_Shitty_Ambush_SettingTempMapMultiplierLabel>(1.5 NEW FEATURE) Temporary maps strength multiplier</CM_Less_Shitty_Ambush_SettingTempMapMultiplierLabel>
 	<CM_Less_Shitty_Ambush_SettingTempMapAdditionalAvgRaidsPer10DaysLabel>Additional average raids per 10 day on site</CM_Less_Shitty_Ambush_SettingTempMapAdditionalAvgRaidsPer10DaysLabel>
+	<CM_Less_Shitty_Ambush_SettingTempMapAdditionalAvgRaidsPer10DaysLabelTooltip>
+		When set to something > 0, For each 10 in game days, current site maps will suffer this number of raids. This value is only math expectation but not exact value.
+		\nOnly human hostile factions and mechs may attack your site maps. However with Anomaly DLC active, some entities may also be spawn based on current monolith level.
+		\nThe calculation works in similar way of previous settings for world map ambushes.
+		\nPlease note that this option works only for site maps, such as mining sites discovered by remote scanner, quest maps or hostile faction attack, etc.. Some mods may also generate site maps. But player settlement won't be touched.
+	</CM_Less_Shitty_Ambush_SettingTempMapAdditionalAvgRaidsPer10DaysLabelTooltip>
 	
 	<CM_Less_Shitty_Ambush_SettingExitMapBeforeWinLabel>Allow exiting map before defeating ambush</CM_Less_Shitty_Ambush_SettingExitMapBeforeWinLabel>
 	<CM_Less_Shitty_Ambush_SettingMapExitGridAvailableTimeLabel>Seconds until exit map possible (1000 seconds per day)</CM_Less_Shitty_Ambush_SettingMapExitGridAvailableTimeLabel>

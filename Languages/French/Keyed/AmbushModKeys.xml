@@ -19,7 +19,13 @@
 	
 	<CM_Less_Shitty_Ambush_SettingTempMapMultiplierLabel>(1.5 NOUVEAUTÉ) Multiplicateur de force d'embuscade sur les cartes temporaires</CM_Less_Shitty_Ambush_SettingTempMapMultiplierLabel>
 	<CM_Less_Shitty_Ambush_SettingTempMapAdditionalAvgRaidsPer10DaysLabel>Sur les cartes temporaires, le nombre moyen d'attaques additionelles pour tous les 10 jours</CM_Less_Shitty_Ambush_SettingTempMapAdditionalAvgRaidsPer10DaysLabel>
-	
+	<CM_Less_Shitty_Ambush_SettingTempMapAdditionalAvgRaidsPer10DaysLabelTooltip>
+		Lorsqu'une valeur > 0, des cartes temporaires actuelles subiront un tel nombre de raids tous les 10 jours de jeu. Cette valeur est une espérence probabiliste et non une valeur exacte.
+		\nSeules les factions hostiles humaines et les mécanoïdes peuvent attaquer vos cartes de site. Cependant, avec le DLC Anomaly activé, certaines entités peuvent également apparaître en fonction du niveau actuel du monolithe.
+		\nLe calcul fonctionne de manière similaire aux paramètres précédents pour les embuscades sur la carte du monde.
+		\nVeuillez noter que cette option ne fonctionne que pour les cartes temporaires, telles que les sites de mines découverts par un scanner, les cartes de quête ou les attaques de factions hostiles, etc. Certains mods peuvent également générer des cartes de site. Cependant, les colonies du joueur ne seront pas affectées.
+	</CM_Less_Shitty_Ambush_SettingTempMapAdditionalAvgRaidsPer10DaysLabelTooltip>
+
 	<CM_Less_Shitty_Ambush_SettingExitMapBeforeWinLabel>Autoriser à quitter la carte avant de vaincre l'embuscade</CM_Less_Shitty_Ambush_SettingExitMapBeforeWinLabel>
 	<CM_Less_Shitty_Ambush_SettingMapExitGridAvailableTimeLabel>Temps nécessaire avant de pouvoir quitter la carte (1000 secondes par jour)</CM_Less_Shitty_Ambush_SettingMapExitGridAvailableTimeLabel>
 	<CM_Less_Shitty_Ambush_SettingDebugLogMessagesLabel>Afficher les messages du debug</CM_Less_Shitty_Ambush_SettingDebugLogMessagesLabel>

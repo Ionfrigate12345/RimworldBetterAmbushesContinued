@@ -90,12 +90,10 @@ namespace CM_Less_Shitty_Ambush.Global
             if (anomalyThreatLevel >= 0)
             {
                 eligibleAnomalyThreatIncidents.Add(IncidentDef.Named("PsychicRitualSiege"));
-                eligibleAnomalyThreatIncidents.Add(IncidentDef.Named("ShamblerSwarm"));
             }
             if (anomalyThreatLevel >= 1)
             {
                 eligibleAnomalyThreatIncidents.Add(IncidentDef.Named("SightstealerSwarm"));
-                eligibleAnomalyThreatIncidents.Add(IncidentDef.Named("GhoulAttack"));
                 eligibleAnomalyThreatIncidents.Add(IncidentDef.Named("HateChanters"));
                 eligibleAnomalyThreatIncidents.Add(IncidentDef.Named("FleshbeastAttack"));
                 eligibleAnomalyThreatIncidents.Add(IncidentDef.Named("GorehulkAssault"));
@@ -114,7 +112,7 @@ namespace CM_Less_Shitty_Ambush.Global
             Faction onMapHostileFaction = null;
             var hostilePawns = map.mapPawns.AllPawnsSpawned.Where(
                 pawn => pawn.Faction.HostileTo(Faction.OfPlayer)
-                && eligibleHostileFactions.Contains(pawn.Faction)
+                && eligibleHostileFactions.Any(faction => faction.GetUniqueLoadID() == pawn.Faction.GetUniqueLoadID())
             );
             Pawn randomHostilePawn = null;
             if (hostilePawns.Any())
