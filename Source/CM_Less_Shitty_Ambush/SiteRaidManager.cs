@@ -54,25 +54,25 @@ namespace CM_Less_Shitty_Ambush
             if (GenHostility.AnyHostileActiveThreatToPlayer(selectedMap))
             {
                 Faction enemyReinforcementFaction;
-                if (selectedMap.Parent.Faction != null && selectedMap.Parent.Faction.HostileTo(Faction.OfPlayer))
+                if (selectedMap.ParentFaction != null && selectedMap.ParentFaction.HostileTo(Faction.OfPlayer))
                 {
                     //If site map belongs to an enemy faction.
-                    enemyReinforcementFaction = selectedMap.Parent.Faction;
+                    enemyReinforcementFaction = selectedMap.ParentFaction;
                 }
                 else
                 {
                     //Pick the faction any human enemy on the map
-                    enemyReinforcementFaction = Utils.FindRandomHumanHostileFactionOnMap(selectedMap, eligibleHostileFactions);
+                    enemyReinforcementFaction = Utils.FindRandomHostileFactionOnMap(selectedMap, eligibleHostileFactions);
                 }
                     
                 if (enemyReinforcementFaction != null && Rand.Range(0, 1000) <= 800)
                 {
                     //Has a chance to be enemy reinforcement from the same enemy faction on the map
                     selectedHostileFaction = enemyReinforcementFaction;
-                    Find.LetterStack.ReceiveLetter("CM_Less_Shitty_Ambush_SettingTempMapEnemyReinforcementMessage".Translate(),
+                    /*Find.LetterStack.ReceiveLetter("CM_Less_Shitty_Ambush_SettingTempMapEnemyReinforcementMessage".Translate(),
                         "CM_Less_Shitty_Ambush_SettingTempMapEnemyReinforcementMessage".Translate(),
                         LetterDefOf.NegativeEvent
-                    );
+                    );*/
                 }
                 else
                 {

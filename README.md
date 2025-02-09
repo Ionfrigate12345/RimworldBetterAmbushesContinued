@@ -12,3 +12,4 @@ All credit to original authors Kangz of Memphis and Captain Muscles
 
 - Added Simplified Chinese and French translation for mod option menu
 - New option for adding a given percentage of threat points from your largest colony into the ambush point.
+- New option for activating additional raids on all temporary site maps

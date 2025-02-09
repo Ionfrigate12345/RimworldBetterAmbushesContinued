@@ -78,10 +78,11 @@ namespace CM_Less_Shitty_Ambush
             listing_Standard.Label(tempMapMultiplier.ToString());
             tempMapMultiplier = listing_Standard.Slider(tempMapMultiplier, 0.1f, maxTempMapMultiplier);
 
-            listing_Standard.Label("CM_Less_Shitty_Ambush_SettingTempMapAdditionalAvgRaidsPer10DaysLabel".Translate());
-            listing_Standard.Label(tempMapAdditionalAvgRaidsPer10Days.ToString(), default, 
+            listing_Standard.Label("CM_Less_Shitty_Ambush_SettingTempMapAdditionalAvgRaidsPer10DaysLabel".Translate(), 
+                -1,
                 "CM_Less_Shitty_Ambush_SettingTempMapAdditionalAvgRaidsPer10DaysLabelTooltip".Translate()
-            );
+                );
+            listing_Standard.Label(tempMapAdditionalAvgRaidsPer10Days.ToString());
             tempMapAdditionalAvgRaidsPer10Days = listing_Standard.Slider(tempMapAdditionalAvgRaidsPer10Days, 0f, 100.0f);
 
             listing_Standard.CheckboxLabeled("CM_Less_Shitty_Ambush_SettingExitMapBeforeWinLabel".Translate(), ref allowExitMapBeforeWin);
