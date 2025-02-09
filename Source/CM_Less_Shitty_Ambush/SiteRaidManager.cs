@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Linq;
 using CM_Less_Shitty_Ambush.Global;
 using RimWorld;
 using RimWorld.Planet;
 using Verse;
-using Verse.Noise;
-using static UnityEngine.GraphicsBuffer;
 
 namespace CM_Less_Shitty_Ambush
 {
@@ -22,11 +16,10 @@ namespace CM_Less_Shitty_Ambush
         {
             base.WorldComponentTick();
             var tickCount = Find.TickManager.TicksGame;
-            if (tickCount % GenDate.TicksPerHour * 2.4 != 654) //Run 10x per day
+            if (tickCount % GenDate.TicksPerHour * 2.4 != 1200) //Run 10x per day
             {
                 return;
             }
-
             //Trigger chance per 1/10 days (2.4 in-game hours). The maximum possible value is 1 (100% chance to trigger each 2.4 hours)
             float chancePerOneTenthDays = LessShittyAmbushMod.settings.tempMapAdditionalAvgRaidsPer10Days / 100.0f;
             if(Rand.Range(0, 1000) > chancePerOneTenthDays * 1000)
@@ -82,16 +75,23 @@ namespace CM_Less_Shitty_Ambush
 
             float defaultThreatPoints = StorytellerUtility.DefaultThreatPointsNow(selectedMap);
             float newThreatPoints = defaultThreatPoints * LessShittyAmbushMod.settings.tempMapMultiplier;
-            Logger.MessageFormat("(Less Shitty Ambush)Muliplying site raid points: {0} * {1} = {2}", defaultThreatPoints, LessShittyAmbushMod.settings.tempMapMultiplier, newThreatPoints);
+            Logger.MessageFormat("(Less Shitty Ambush) Muliplying site raid points: {0} * {1} = {2}", defaultThreatPoints, LessShittyAmbushMod.settings.tempMapMultiplier, newThreatPoints);
             if (LessShittyAmbushMod.settings.usePlayerMainColonyThreat)
             {
                 int colonyThreatAmbushPoints = Utils.GetAmbushThreatPointsByPlayerMainColonyMapWealth(LessShittyAmbushMod.settings.enemyFactionPlayerMainColonyThreatMultiplier);
                 newThreatPoints += colonyThreatAmbushPoints;
-                Logger.MessageFormat("(Less Shitty Ambush)Adding player colony points as additional temp map raid strength: {0}", colonyThreatAmbushPoints);
+                Logger.MessageFormat("(Less Shitty Ambush) Adding player colony points as additional temp map raid strength: {0}", colonyThreatAmbushPoints);
             }
-            if (!Utils.RunIncident(IncidentDefOf.RaidEnemy, newThreatPoints))
+
+            var incidentWorker = IncidentDefOf.RaidEnemy;
+            if (ModsConfig.AnomalyActive && selectedHostileFaction == Faction.OfEntities)
             {
-                Log.Error("[Less Shitty Ambush] Failed while trying to invoke IncidentWorker_RaidEnemy");
+                incidentWorker = Utils.RandomIncidentDefForAnomalyRaid();
+            }
+
+            if (!Utils.RunIncident(incidentWorker, selectedMap, newThreatPoints))
+            {
+                Log.Error("[Less Shitty Ambush] Failed while trying to invoke IncidentWorker_RaidEnemy for faction:" + selectedHostileFaction.def.label);
                 return;
             }
         }
