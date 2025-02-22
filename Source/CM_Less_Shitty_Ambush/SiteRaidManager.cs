@@ -30,6 +30,8 @@ namespace CM_Less_Shitty_Ambush
             var siteMaps = Find.Maps.Where(
                 m => m.Parent != null
                 && !(m.Parent is Settlement && m.ParentFaction == Faction.OfPlayer) //Not player settlement
+                && (ModsConfig.AnomalyActive && m.Biome != BiomeDefOf.Undercave) //Not Undercave of Anomaly
+                && (ModsConfig.IsActive("Mlie.DeepRim") && m.Biome.defName != "Underground") //Not underground map from DeepRim
                 && !Utils.IsSOS2OrRimNauts2SpaceMap(m) //Not SOS2 or Rimnauts2 maps
             ).ToList();
             if (!siteMaps.Any())
