@@ -3,6 +3,8 @@
 	<!-- 设置 -->
 	<CM_Less_Shitty_Ambush_SettingEnemyFactionMultiplierLabel>敌对派系强度倍率</CM_Less_Shitty_Ambush_SettingEnemyFactionMultiplierLabel>
 	<CM_Less_Shitty_Ambush_SettingManhunterPackMultiplierLabel>狂暴动物群强度倍率</CM_Less_Shitty_Ambush_SettingManhunterPackMultiplierLabel>
+	<CM_Less_Shitty_Ambush_VisibilityMultiplier>远行队可见度倍率</CM_Less_Shitty_Ambush_VisibilityMultiplier>
+	<CM_Less_Shitty_Ambush_VisibilityMultiplierTooltip>原版的玩家远行队可见度倍率乘以这个数值。可用来调整大地图上玩家远行队遭遇伏击的频率。</CM_Less_Shitty_Ambush_VisibilityMultiplierTooltip>
 	
 	<CM_Less_Shitty_Ambush_SettingUsePlayerMainColonyThreat>(1.5 新功能)从玩家最大定居点额外增加伏击强度</CM_Less_Shitty_Ambush_SettingUsePlayerMainColonyThreat>
 	<CM_Less_Shitty_Ambush_SettingUsePlayerMainColonyThreatTooltip>

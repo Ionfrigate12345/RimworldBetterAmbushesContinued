@@ -14,6 +14,7 @@ namespace CM_Less_Shitty_Ambush
 
         public float enemyFactionMultiplier = 2.0f;
         public float manhunterPackMultiplier = 2.0f;
+        public float caravanVisibilityMultiplier = 1.0f;
 
         private int maxSecondsUntilExitMapPossible = 1000;
         public bool usePlayerMainColonyThreat = false;
@@ -34,6 +35,8 @@ namespace CM_Less_Shitty_Ambush
 
             Scribe_Values.Look(ref enemyFactionMultiplier, "enemyFactionMultiplier", 2.0f);
             Scribe_Values.Look(ref manhunterPackMultiplier, "manhunterPackMultiplier", 2.0f);
+            Scribe_Values.Look(ref caravanVisibilityMultiplier, "caravanVisibilityMultiplier", 1.0f);
+
             Scribe_Values.Look(ref tempMapMultiplier, "tempMapMultiplier", 2.0f);
             Scribe_Values.Look(ref tempMapAdditionalAvgRaidsPer10Days, "tempMapAdditionalAvgRaidsPer10Days", 1.0f);
 
@@ -59,6 +62,13 @@ namespace CM_Less_Shitty_Ambush
             listing_Standard.Label("CM_Less_Shitty_Ambush_SettingManhunterPackMultiplierLabel".Translate());
             listing_Standard.Label(manhunterPackMultiplier.ToString());
             manhunterPackMultiplier = listing_Standard.Slider(manhunterPackMultiplier, 0.1f, maxManhunterPackMultiplier);
+
+            listing_Standard.Label("CM_Less_Shitty_Ambush_VisibilityMultiplier".Translate(), 
+                -1, 
+                "CM_Less_Shitty_Ambush_VisibilityMultiplierTooltip".Translate()
+            );
+            listing_Standard.Label(caravanVisibilityMultiplier.ToString());
+            caravanVisibilityMultiplier = listing_Standard.Slider(caravanVisibilityMultiplier, 0.5f, 10.0f);
 
             listing_Standard.CheckboxLabeled(
                 "CM_Less_Shitty_Ambush_SettingUsePlayerMainColonyThreat".Translate(), 

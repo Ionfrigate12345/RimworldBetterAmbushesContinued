@@ -60,6 +60,7 @@
     <Compile Include="AmbushInfo.cs" />
     <Compile Include="AmbushModSettings.cs" />
     <Compile Include="AmbushTracker.cs" />
+    <Compile Include="CaravanVisibility_Patches.cs" />
     <Compile Include="ExitMapGrid_Patches.cs" />
     <Compile Include="Global\Utils.cs" />
     <Compile Include="IncidentWorker_Ambush_EnemyFaction_Patches.cs" />

@@ -3,6 +3,8 @@
 	<!--Settings-->
 	<CM_Less_Shitty_Ambush_SettingEnemyFactionMultiplierLabel>Enemy faction strength multiplier</CM_Less_Shitty_Ambush_SettingEnemyFactionMultiplierLabel>
 	<CM_Less_Shitty_Ambush_SettingManhunterPackMultiplierLabel>Manhunter pack strength multiplier</CM_Less_Shitty_Ambush_SettingManhunterPackMultiplierLabel>
+	<CM_Less_Shitty_Ambush_VisibilityMultiplier>Caravan Visibility Multiplier</CM_Less_Shitty_Ambush_VisibilityMultiplier>
+	<CM_Less_Shitty_Ambush_VisibilityMultiplierTooltip>Vanilla caravan visibility will be multiplied by this value. You can use it to adjust the frequency of caravan ambush on world map.</CM_Less_Shitty_Ambush_VisibilityMultiplierTooltip>
 	
 	<CM_Less_Shitty_Ambush_SettingUsePlayerMainColonyThreat>(1.5 NEW FEATURE) Additional ambush threat from player largest settlement</CM_Less_Shitty_Ambush_SettingUsePlayerMainColonyThreat>
 	<CM_Less_Shitty_Ambush_SettingUsePlayerMainColonyThreatTooltip>

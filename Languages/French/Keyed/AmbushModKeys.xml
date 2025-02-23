@@ -3,6 +3,8 @@
 	<!-- Paramètres -->
 	<CM_Less_Shitty_Ambush_SettingEnemyFactionMultiplierLabel>Multiplicateur de force d'embuscade des factions ennemies</CM_Less_Shitty_Ambush_SettingEnemyFactionMultiplierLabel>
 	<CM_Less_Shitty_Ambush_SettingManhunterPackMultiplierLabel>Multiplicateur de force d'embuscade des meutes d'animaux enragés</CM_Less_Shitty_Ambush_SettingManhunterPackMultiplierLabel>
+	<CM_Less_Shitty_Ambush_VisibilityMultiplier>Multiplicateur de la visibilité des caravanes</CM_Less_Shitty_Ambush_VisibilityMultiplier>
+	<CM_Less_Shitty_Ambush_VisibilityMultiplierTooltip>La visibilité des caravanes du Vanilla sera multipliée par cette valeur, permettant d'ajuster la fréquence d'embuscades sur la carte mondiale.</CM_Less_Shitty_Ambush_VisibilityMultiplierTooltip>
 	
 	<CM_Less_Shitty_Ambush_SettingUsePlayerMainColonyThreat>(1.5 NOUVEAUTÉ) Embuscade supplémentaire par la plus grande colonie du joueur</CM_Less_Shitty_Ambush_SettingUsePlayerMainColonyThreat>
 	<CM_Less_Shitty_Ambush_SettingUsePlayerMainColonyThreatTooltip>
