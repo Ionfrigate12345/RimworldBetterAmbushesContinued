@@ -59,6 +59,13 @@ namespace CM_Less_Shitty_Ambush.Global
             return IsSOS2SpaceMap(map) || IsRimNauts2SpaceMap(map);
         }
 
+        public static bool IsUndergroundMaps(Map map)
+        {
+            return (ModsConfig.AnomalyActive && map.Biome == BiomeDefOf.Undercave) //Undercave of Anomaly
+                || (ModsConfig.IsActive("Mlie.DeepRim") && map.Biome.defName == "Underground") //Underground map from DeepRim
+                ;
+        }
+
         public static bool RunIncident(IncidentDef incidentDef, Map map = null, float points = 0)
         {
             IIncidentTarget target = Find.World;
@@ -124,5 +131,26 @@ namespace CM_Less_Shitty_Ambush.Global
             }
             return hostilePawn.Faction;
         }
+
+        public static IntVec3 FindValidInfestationSpot(Map map)
+        {
+            List<IntVec3> possibleCells = new List<IntVec3>();
+
+            foreach (IntVec3 cell in map.AllCells)
+            {
+                if (map.roofGrid.RoofAt(cell) == RoofDefOf.RoofRockThick && cell.Standable(map) && !cell.Fogged(map))
+                {
+                    possibleCells.Add(cell);
+                }
+            }
+
+            if (possibleCells.Count > 0)
+            {
+                return possibleCells.RandomElement();
+            }
+
+            return IntVec3.Invalid;
+        }
+
     }
 }

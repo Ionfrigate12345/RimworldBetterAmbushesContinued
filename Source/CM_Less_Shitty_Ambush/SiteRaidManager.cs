@@ -30,8 +30,7 @@ namespace CM_Less_Shitty_Ambush
             var siteMaps = Find.Maps.Where(
                 m => m.Parent != null
                 && !(m.Parent is Settlement && m.ParentFaction == Faction.OfPlayer) //Not player settlement
-                && (ModsConfig.AnomalyActive && m.Biome != BiomeDefOf.Undercave) //Not Undercave of Anomaly
-                && (ModsConfig.IsActive("Mlie.DeepRim") && m.Biome.defName != "Underground") //Not underground map from DeepRim
+                && !Utils.IsUndergroundMaps(m) //Not some underground maps
                 && !Utils.IsSOS2OrRimNauts2SpaceMap(m) //Not SOS2 or Rimnauts2 maps
             ).ToList();
             if (!siteMaps.Any())
@@ -105,7 +104,10 @@ namespace CM_Less_Shitty_Ambush
 
             if (!Utils.RunIncident(incidentWorker, selectedMap, newThreatPoints))
             {
-                Log.Error("[Less Shitty Ambush] Failed while trying to invoke IncidentWorker_RaidEnemy for faction:" + selectedHostileFaction.def.label);
+                Log.Error("[Less Shitty Ambush] Failed while trying to invoke IncidentWorker_RaidEnemy for faction:" 
+                    + selectedHostileFaction.def.label 
+                    + " on the map " 
+                    + selectedMap.GetUniqueLoadID());
                 return;
             }
         }
