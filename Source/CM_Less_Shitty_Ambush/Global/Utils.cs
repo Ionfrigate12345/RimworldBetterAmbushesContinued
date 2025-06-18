@@ -114,17 +114,15 @@ namespace CM_Less_Shitty_Ambush.Global
             return eligibleAnomalyThreatIncidents.RandomElement();
         }
 
-        public static Faction FindRandomHostileFactionOnMap(Map map, List<Faction> eligibleHostileFactions)
+        public static Faction FindRandomHostileHumanFactionOnMap(Map map)
         {
-            var hostilePawn = map.mapPawns.AllPawnsSpawned.FirstOrDefault(pawn =>
-                pawn.Awake()
-                && !pawn.Position.Fogged(map)
+            var hostilePawn = map.mapPawns.AllPawnsSpawned.Where(pawn => 
+                pawn.RaceProps.Humanlike
+                && pawn.Faction.HostileTo(Faction.OfPlayer)
                 && !pawn.IsPrisoner
                 && !pawn.IsSlave
                 && !pawn.Dead
-                && !pawn.Downed
-                && eligibleHostileFactions.Any(faction => faction.GetUniqueLoadID() == pawn.Faction.GetUniqueLoadID())
-            );
+            ).RandomElement();
             if (hostilePawn == null)
             {
                 return null;

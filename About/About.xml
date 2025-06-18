@@ -7,6 +7,8 @@
 	<supportedVersions>
 		<li>1.2</li>
 		<li>1.3</li>
+		<li>1.5</li>
+		<li>1.6</li>
 	</supportedVersions>
 	<description>Make Ambushes big big! yes yes! Adds a slider that lets you determine how many times larger you want your ambush to be! Adds an option that allows you to bravely run away from an ambush after a set amount of time!</description>
 	<modDependencies>
