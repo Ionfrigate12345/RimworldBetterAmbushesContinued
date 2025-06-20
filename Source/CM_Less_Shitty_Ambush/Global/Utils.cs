@@ -8,7 +8,7 @@ using Verse;
 
 namespace CM_Less_Shitty_Ambush.Global
 {
-    public class Utils
+    public static class Utils
     {
         public static int GetAmbushThreatPointsByPlayerMainColonyMapWealth(float factorPercentage)
         {
@@ -59,11 +59,33 @@ namespace CM_Less_Shitty_Ambush.Global
             return IsSOS2SpaceMap(map) || IsRimNauts2SpaceMap(map);
         }
 
+        public static bool IsOdessySpaceMaps(Map map)
+        {
+            return (ModsConfig.AnomalyActive && map.Biome == BiomeDefOf.Space
+                || ModsConfig.AnomalyActive && map.Biome == BiomeDefOf.Orbit
+            ) //Odessy space maps
+            ;
+        }
+
         public static bool IsUndergroundMaps(Map map)
         {
             return (ModsConfig.AnomalyActive && map.Biome == BiomeDefOf.Undercave) //Undercave of Anomaly
-                || (ModsConfig.IsActive("Mlie.DeepRim") && map.Biome.defName == "Underground") //Underground map from DeepRim
-                ;
+                || (ModsConfig.IsActive("Mlie.DeepRim") && map.Biome.defName == "Underground"
+            ) //Underground map from DeepRim
+            ;
+        }
+
+        public static bool HasBorderWalkableCell(this Map map)
+        {
+            var whole = CellRect.WholeMap(map);
+
+            foreach (var c in whole.EdgeCells)
+            {
+                if (GenGrid.Standable(c, map))
+                    return true;
+            }
+
+            return false;
         }
 
         public static bool RunIncident(IncidentDef incidentDef, Map map = null, float points = 0)
