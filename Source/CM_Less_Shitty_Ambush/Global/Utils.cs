@@ -59,15 +59,15 @@ namespace CM_Less_Shitty_Ambush.Global
             return IsSOS2SpaceMap(map) || IsRimNauts2SpaceMap(map);
         }
 
-        public static bool IsOdessySpaceMaps(Map map)
+        public static bool IsOdessySpaceMap(Map map)
         {
-            return (ModsConfig.AnomalyActive && map.Biome == BiomeDefOf.Space
-                || ModsConfig.AnomalyActive && map.Biome == BiomeDefOf.Orbit
+            return (ModsConfig.OdysseyActive && map.Biome == BiomeDefOf.Space
+                || ModsConfig.OdysseyActive && map.Biome == BiomeDefOf.Orbit
             ) //Odessy space maps
             ;
         }
 
-        public static bool IsUndergroundMaps(Map map)
+        public static bool IsUndergroundMap(Map map)
         {
             return (ModsConfig.AnomalyActive && map.Biome == BiomeDefOf.Undercave) //Undercave of Anomaly
                 || (ModsConfig.IsActive("Mlie.DeepRim") && map.Biome.defName == "Underground"

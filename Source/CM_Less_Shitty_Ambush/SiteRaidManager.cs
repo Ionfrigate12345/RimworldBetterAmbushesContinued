@@ -30,9 +30,9 @@ namespace CM_Less_Shitty_Ambush
             var siteMaps = Find.Maps.Where(
                 m => m.Parent != null
                 && !(m.Parent is Settlement && m.ParentFaction == Faction.OfPlayer) //Not player settlement
-                && !Utils.IsUndergroundMaps(m) //Not some underground maps
+                && !Utils.IsUndergroundMap(m) //Not some underground maps
                 && !Utils.IsSOS2OrRimNauts2SpaceMap(m) //Not SOS2 or Rimnauts2 maps
-                && !Utils.IsOdessySpaceMaps(m)
+                && !Utils.IsOdessySpaceMap(m)
                 && Utils.HasBorderWalkableCell(m)
             ).ToList();
             if (!siteMaps.Any())
