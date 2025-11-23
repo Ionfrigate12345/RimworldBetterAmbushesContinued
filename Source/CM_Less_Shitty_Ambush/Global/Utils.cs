@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using HarmonyLib;
 using RimWorld;
 using Verse;
 
@@ -12,12 +13,25 @@ namespace CM_Less_Shitty_Ambush.Global
     {
         public static int GetAmbushThreatPointsByPlayerMainColonyMapWealth(float factorPercentage)
         {
-            var playerHomeMap = GetPlayerMainColonyMap();
-            if(playerHomeMap ==  null)
+            if (LessShittyAmbushMod.settings.useAllMapsToCalculateThreat)
             {
-                return 0;
+                var playerMaps = Find.Maps.ToList();
+                int threatSum = 0;
+                foreach(var map in playerMaps)
+                {
+                    threatSum += GetRandomThreatPointsByPlayerWealth(map, factorPercentage);
+                }
+                return threatSum;
             }
-            return GetRandomThreatPointsByPlayerWealth(playerHomeMap, factorPercentage);
+            else
+            {
+                var playerHomeMap = GetPlayerMainColonyMap();
+                if (playerHomeMap == null)
+                {
+                    return 0;
+                }
+                return GetRandomThreatPointsByPlayerWealth(playerHomeMap, factorPercentage);
+            }
         }
 
         public static int GetRandomThreatPointsByPlayerWealth(
@@ -59,12 +73,34 @@ namespace CM_Less_Shitty_Ambush.Global
             return IsSOS2SpaceMap(map) || IsRimNauts2SpaceMap(map);
         }
 
+
         public static bool IsOdessySpaceMap(Map map)
         {
             return (ModsConfig.OdysseyActive && map.Biome == BiomeDefOf.Space
                 || ModsConfig.OdysseyActive && map.Biome == BiomeDefOf.Orbit
             ) //Odessy space maps
             ;
+        }
+
+        public static bool IsSpaceMap(Map map)
+        {
+            var traverse = Traverse.Create(map);
+            var isSpaceMethod = traverse.Method("IsSpace");
+            if (isSpaceMethod.MethodExists() && (bool)isSpaceMethod.GetValue())
+            {
+                return true;
+            }
+            else if (map.Biome.defName.Contains("OuterSpace"))
+            {
+                return true;
+            }
+            else if (ModsConfig.OdysseyActive && map.Biome == BiomeDefOf.Space
+                || ModsConfig.OdysseyActive && map.Biome == BiomeDefOf.Orbit
+            ) //Odessy space maps
+            {
+                return true;
+            }
+            return false;
         }
 
         public static bool IsUndergroundMap(Map map)

@@ -18,6 +18,7 @@ namespace CM_Less_Shitty_Ambush
 
         private int maxSecondsUntilExitMapPossible = 1000;
         public bool usePlayerMainColonyThreat = false;
+        public bool useAllMapsToCalculateThreat = true;
         public float enemyFactionPlayerMainColonyThreatMultiplier = 0.1f;
         public float manhunterPlayerMainColonyThreatMultiplier = 0.1f;
 
@@ -45,6 +46,7 @@ namespace CM_Less_Shitty_Ambush
             Scribe_Values.Look(ref showDebugLogMessages, "showDebugLogMessages", false);
 
             Scribe_Values.Look(ref usePlayerMainColonyThreat, "usePlayerMainColonyThreat", false);
+            Scribe_Values.Look(ref useAllMapsToCalculateThreat, "useAllMapsToCalculateThreat", true);
             Scribe_Values.Look(ref enemyFactionPlayerMainColonyThreatMultiplier, "enemyFactionPlayerMainColonyThreatMultiplier", 0.1f);
             Scribe_Values.Look(ref manhunterPlayerMainColonyThreatMultiplier, "manhunterPlayerMainColonyThreatMultiplier", 0.1f);
         }
@@ -75,7 +77,13 @@ namespace CM_Less_Shitty_Ambush
                 ref usePlayerMainColonyThreat,
                 "CM_Less_Shitty_Ambush_SettingUsePlayerMainColonyThreatTooltip".Translate()
             );
-            
+
+            listing_Standard.CheckboxLabeled(
+                "CM_Less_Shitty_Ambush_SettingUseAllMapsToCalculateThreat".Translate(),
+                ref useAllMapsToCalculateThreat,
+                "CM_Less_Shitty_Ambush_SettingUseAllMapsToCalculateThreatTooltip".Translate()
+            );
+
             listing_Standard.Label("CM_Less_Shitty_Ambush_SettingUsePlayerMainColonyThreatManhunterPackPercentageLabel".Translate());
             listing_Standard.Label(enemyFactionPlayerMainColonyThreatMultiplier.ToString());
             enemyFactionPlayerMainColonyThreatMultiplier = listing_Standard.Slider(enemyFactionPlayerMainColonyThreatMultiplier, 0f, 1.0f);
